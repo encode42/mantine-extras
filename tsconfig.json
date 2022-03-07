@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "outDir": "build",
+        "target": "ES2015",
+        "lib": ["DOM", "ESNext"],
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "allowJs": true,
+        "declaration": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "listFiles": true,
+        "jsx": "react"
+    },
+    "typedocOptions": {
+        "entryPoints": ["src/index.ts"],
+        "out": ".github/docs",
+        "githubPages": false,
+        "validation": {
+            "invalidLink": true
+        },
+        "readme": "none",
+        "name": "mantine-extras",
+        "includeVersion": true,
+        "sort": ["static-first", "visibility"]
+    },
+    "include": [
+        "**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "dist"
+    ]
+}
