@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Container, useMantineTheme } from "@mantine/core";
+import { Box, Container, useMantineTheme } from "@mantine/core";
 import { ChildrenProps } from "../utils";
 
 // TODO: Automatic favicon generation
@@ -91,7 +91,7 @@ export function StandardLayout({ title, description, prefixed = true, details, c
     const theme = useMantineTheme();
 
     return (
-        <Container sx={{
+        <Box sx={{
             "minWidth": width,
             "maxWidth": width,
             "height": height
@@ -117,7 +117,8 @@ export function StandardLayout({ title, description, prefixed = true, details, c
             {
                 containerize ? (
                     <Container sx={{
-                        "height": "inherit"
+                        "height": "inherit",
+                        "overflowX": "hidden"
                     }}>
                         {children}
                     </Container>
@@ -125,6 +126,6 @@ export function StandardLayout({ title, description, prefixed = true, details, c
                     children
                 )
             }
-        </Container>
+        </Box>
     );
 }

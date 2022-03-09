@@ -98,9 +98,6 @@ function COptionModal({ open, onClose, onApply, title = "Advanced options", valu
                 closeRef.current.focus();
             }
 
-            console.log("closing")
-            console.log(values)
-
             open.set(false);
             reset();
             onClose?.();
