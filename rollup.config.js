@@ -14,18 +14,25 @@ import path from "path";
 const outDir = "dist";
 
 /**
+ * The name of the project.
+ *
+ * @type {string}
+ */
+const name = "mantine-extras";
+
+/**
  * Get a base configuration
  *
- * @param {ModuleFormat} type Type to get base for
+ * @param {import("rollup").ModuleFormat} type Type to get base for
  * @param {boolean} [toMinify=false] Whether to create minified output
- * @return {RollupOptions}
+ * @return {import("rollup").RollupOptions}
  */
 function getBase(type, toMinify = false) {
     return {
         "input": "src/index.ts",
         "output": {
             "file": `${outDir}/${type}${toMinify ? ".min" : ""}.js`,
-            "name": type === "umd" ? "NBSjs" : undefined,
+            "name": type === "umd" ? name : undefined,
             "format": type
         },
         "plugins": [
@@ -52,10 +59,13 @@ function getBase(type, toMinify = false) {
 /**
  * Get the config for a build type.
  *
- * @param {ModuleFormat} types Types to build
- * @return {RollupOptions[]}
+ * @param {import("rollup").ModuleFormat} types Types to build
+ * @return {import("rollup").RollupOptions[]}
  */
 function getConfig(...types) {
+    /**
+     * @type {import("rollup").RollupOptions[]}
+     */
     const configs = [{
         "input": "build/index.d.ts",
         "output": {
