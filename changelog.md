@@ -6,7 +6,7 @@
 - Renamed the `Error` component to `ErrorPage`.
 
 ### Added
-- `util#toArrayBuffer` function.
+- The `util#toArrayBuffer` function.
 
 # 3.1.0
 ### Changed
