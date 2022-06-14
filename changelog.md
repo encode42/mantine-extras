@@ -1,3 +1,11 @@
+# 3.3.0
+### Fixed
+- `Social#iconProps` and `Social#actionIconProps` not being optional.
+- `Video#config` and `Video#boxProps` not being optional.
+
+### Removed
+- Temporarily removed the `MDX` component.
+
 # 3.2.1
 ### Changed
 - Renamed `ErrorProps` to `ErrorPageProps`.
