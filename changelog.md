@@ -1,3 +1,13 @@
+# 3.2.0
+### Fixed
+- `SocialProps#iconProps` and `SocialProps#actionIconProps` not being optional.
+
+### Changed
+- Renamed the `Error` component to `ErrorPage`.
+
+### Added
+- `util#toArrayBuffer` function.
+
 # 3.1.0
 ### Changed
 - Target has been changed to `ES2021` from `ES2015`.

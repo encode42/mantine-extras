@@ -17,12 +17,12 @@ export interface SocialProps extends AnchorProps<"a"> {
     /**
      * Properties for the {@link icon}.
      */
-    "iconProps": TablerIconProps,
+    "iconProps"?: TablerIconProps,
 
     /**
      * Properties for the {@link https://mantine.dev/core/action-icon ActionIcon}.
      */
-    "actionIconProps": ActionIconProps<"button">,
+    "actionIconProps"?: ActionIconProps<"button">,
 }
 
 /**

@@ -1,5 +1,5 @@
 export * from "./Caption";
-export * from "./Error";
+export * from "./ErrorPage";
 export * from "./Label";
 export * from "./MDX";
 export * from "./Slider";

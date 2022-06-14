@@ -41,5 +41,12 @@ export function save(contents: any, mime: string, filename: string): void {
     saveAs(blob, filename);
 }
 
+/**
+ * Convert a {@link Buffer} to an {@link ArrayBuffer}
+ */
+export function toArrayBuffer(buffer: Buffer) {
+    return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength);
+}
+
 export * from "./type";
 export * from "./style";
