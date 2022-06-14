@@ -1,7 +1,7 @@
 {
   "name": "@encode42/mantine-extras",
   "description": "Extra components and functionality for Mantine UI.",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "author": {
     "name": "Encode42",
     "email": "me@encode42.dev",

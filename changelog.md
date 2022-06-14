@@ -1,3 +1,7 @@
+# 3.2.1
+### Changed
+- Renamed `ErrorProps` to `ErrorPageProps`.
+
 # 3.2.0
 ### Fixed
 - `SocialProps#iconProps` and `SocialProps#actionIconProps` not being optional.
