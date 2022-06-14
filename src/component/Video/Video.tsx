@@ -35,8 +35,8 @@ export function Video({
             <IconPlayerPlay />
         </ThemeIcon>
     ),
-    config,
-    boxProps,
+    config = {},
+    boxProps = {},
     radius = "xl",
     ...other
 }: VideoProps) {

@@ -28,7 +28,7 @@ export interface SocialProps extends AnchorProps<"a"> {
 /**
  * A button to link to social media.
  */
-export function Social({ icon, iconProps, actionIconProps, href, target = "_blank", ...other}: SocialProps) {
+export function Social({ icon, iconProps = {}, actionIconProps = {}, href, target = "_blank", ...other}: SocialProps) {
     const theme = useMantineTheme();
 
     iconProps = deepmerge({
