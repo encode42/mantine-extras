@@ -1,6 +1,7 @@
 # 3.4.0
 ### Changed
 - Moved all `util.ts` functions to their own files, exported from `util.ts`.
+- Use `ynpx` instead of `npx`.
 
 ### Added
 - The `Button` component.
