@@ -1,5 +1,5 @@
 import { useMantineTheme } from "@mantine/core";
-import { StyleType } from "../type";
+import { StyleType } from "../type/StyleType";
 import { merge } from "./merge";
 
 /**

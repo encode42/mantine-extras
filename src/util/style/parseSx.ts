@@ -1,5 +1,5 @@
 import { CSSObject, useMantineTheme } from "@mantine/core";
-import { SxType } from "../type";
+import { SxType } from "../type/SxType";
 import { merge } from "./merge";
 
 /**

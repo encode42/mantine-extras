@@ -1,3 +1,17 @@
+# 3.4.0
+### Changed
+- Moved all `util.ts` functions to their own files, exported from `util.ts`.
+
+### Added
+- The `Button` component.
+- Vertical divider between `statusCode` and `title` of `ErrorPage`.
+- The `Group` component.
+- The `ThemeToggle` component.
+- The `SxOperations` interface.
+
+### Removed
+- Removed `index.ts` from `util/` subdirectories.
+
 # 3.3.0
 ### Fixed
 - `Social#iconProps` and `Social#actionIconProps` not being optional.

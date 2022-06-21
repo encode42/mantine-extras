@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Anchor, Center, Group, Text, Title } from "@mantine/core";
+import { Anchor, Center, Divider, Group, Text, Title } from "@mantine/core";
 
 /**
  * Options for the {@link ErrorPage} component.
@@ -42,6 +42,9 @@ export function ErrorPage({
             }}>
                 <Group>
                     <Title>{statusCode}</Title>
+                    <Divider orientation="vertical" sx={{
+                        "height": "unset"
+                    }} />
                     <Text>{title}</Text>
                 </Group>
                 <Group>
