@@ -1,3 +1,8 @@
+# 3.5.0
+### Changed
+- The `TOSModal` component now has deny/accept buttons.
+- The `TOSPage` component now uses disclosure rather than state.
+
 # 3.4.0
 ### Changed
 - Moved all `util.ts` functions to their own files, exported from `util.ts`.

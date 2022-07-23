@@ -1,6 +1,7 @@
 import React, { cloneElement, ReactElement, useState } from "react";
 import { ModalProps, Stack, StackProps } from "@mantine/core";
 import { mergeSx } from "../../util";
+import { useDisclosure } from "@mantine/hooks";
 
 /**
  * Options for the {@link TOSPage} component.
@@ -23,7 +24,7 @@ export interface TOSPageProps extends StackProps {
  * Page wrapper that doesn't display contents until a TOS is read.
  */
 export function TOSPage({ tos, children, sx, onClose, ...other }: TOSPageProps) {
-    const [agreed, setAgreed] = useState(false);
+    const [agreed, agreedHandler] = useDisclosure(false);
 
     return (
         <>
@@ -36,7 +37,7 @@ export function TOSPage({ tos, children, sx, onClose, ...other }: TOSPageProps) 
                 "onClose": () => {
                     onClose?.();
 
-                    setAgreed(true);
+                    agreedHandler.open();
                 }
             })}
         </>

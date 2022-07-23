@@ -1,6 +1,6 @@
 import React from "react";
 import { useDisclosure } from "@mantine/hooks";
-import { Modal, ModalProps } from "@mantine/core";
+import { Anchor, Box, Button, Group, Modal, ModalProps, Stack } from "@mantine/core";
 import { Optional } from "../../util";
 
 /**
@@ -13,14 +13,32 @@ export type TOSModalProps = Optional<ModalProps, "onClose">;
  *
  * Intended for use with {@link TOSPage}.
  */
-export function TOSModal({ title, onClose, ...other }: TOSModalProps) {
+export function TOSModal({ withCloseButton = false, closeOnClickOutside = false, title, onClose, children, ...other }: TOSModalProps) {
     const [open, openHandler] = useDisclosure(true);
 
-    return (
-        <Modal title={title} centered size="50%" opened={open} onClose={() => {
-            onClose?.();
+    function close() {
+        onClose?.();
 
-            openHandler.close();
-        }} {...other} />
+        openHandler.close();
+    }
+
+    return (
+        <Modal title={title} centered size="50%" opened={open} withCloseButton={withCloseButton} closeOnClickOutside={closeOnClickOutside} onClose={() => {
+            close();
+        }} {...other}>
+            <Stack spacing="xl">
+                <Box>
+                    {children}
+                </Box>
+                <Group grow>
+                    <Button color="red" component={Anchor} href="/">
+                        Deny
+                    </Button>
+                    <Button color="green" onClick={() => {
+                        close();
+                    }}>Accept</Button>
+                </Group>
+            </Stack>
+        </Modal>
     );
 }
