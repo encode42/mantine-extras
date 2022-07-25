@@ -1,3 +1,8 @@
+# 4.0.1
+### Changed
+- Exported the `CaptionWrapperProps` and `VideoGroupProps` files.
+- Depended on required `@emotion` packages.
+
 # 4.0.0
 ### Added
 - The `Caption.Wrapper` component.

@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { SharedCaptionProps } from "../../util";
 import { CaptionLabel } from "./CaptionLabel";
-import { CaptionWrapper } from "./CaptionWrapper";
+import { CaptionWrapper } from "./CaptionWrapper/CaptionWrapper";
 import { createPolymorphicComponent } from "@mantine/core";
 
 const _Caption = forwardRef<HTMLParagraphElement, SharedCaptionProps>(({ ...other }, ref) => {

@@ -1,22 +1,7 @@
-import React, { forwardRef, ReactNode } from "react";
+import React, { forwardRef } from "react";
 import { Collapse, createPolymorphicComponent, Stack } from "@mantine/core";
-import { CaptionLabel } from "./CaptionLabel";
-import { SharedCaptionProps } from "../../util";
-
-/**
- * Options for the {@link CaptionWrapper} component.
- */
-export interface CaptionWrapperProps extends SharedCaptionProps {
-    /**
-     * Text to wrap with the {@link CaptionLabel} component.
-     */
-    "caption"?: ReactNode,
-
-    /**
-     * Whether the caption is displayed.
-     */
-    "opened"?: boolean
-}
+import { CaptionWrapperProps } from "./CaptionWrapperProps";
+import { CaptionLabel } from "../CaptionLabel";
 
 /**
  * A component wrapper for {@link CaptionLabel}.

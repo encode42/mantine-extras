@@ -1,7 +1,7 @@
 import { SharedVideoProps } from "../../util";
 import { VideoPlayer } from "./VideoPlayer";
 import React from "react";
-import { VideoGroup } from "./VideoGroup";
+import { VideoGroup } from "./VideoGroup/VideoGroup";
 
 const _Video = (({...other}: SharedVideoProps) => {
     return <VideoPlayer {...other} />;
