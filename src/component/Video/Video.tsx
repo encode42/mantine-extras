@@ -3,20 +3,23 @@ import { Box, BoxProps, MantineNumberSize, ThemeIcon } from "@mantine/core";
 import { IconPlayerPlay } from "@tabler/icons";
 import deepmerge from "deepmerge";
 import ReactPlayer, { ReactPlayerProps } from "react-player";
+import { mergeSx } from "../../util";
 
 /**
  * Options for the {@link Video} component.
  */
-export interface VideoProps extends ReactPlayerProps {
+export interface VideoProps extends BoxProps<"div"> {
     /**
      * Radius of the component.
      */
     "radius"?: MantineNumberSize,
 
+    "url": ReactPlayerProps["url"],
+
     /**
      * Properties of the {@link https://mantine.dev/core/box Box} component.
      */
-    "boxProps"?: BoxProps<"div">
+    "videoProps"?: Omit<ReactPlayerProps, "url">
 }
 
 /**
@@ -24,40 +27,32 @@ export interface VideoProps extends ReactPlayerProps {
  *
  * @see {@link https://github.com/CookPete/react-player ReactPlayer}
  */
-export function Video({
-    width = "100%",
-    height = "100%",
-    controls = true,
-    playsinline = true,
-    light = true,
-    playIcon = (
-        <ThemeIcon>
-            <IconPlayerPlay />
-        </ThemeIcon>
-    ),
-    config = {},
-    boxProps = {},
-    radius = "xl",
-    ...other
-}: VideoProps) {
-    config = deepmerge({
-        "youtube": {
-            "playervars": {
-                "modestbranding": 1,
-                "rel": 0
+export function Video({ sx, videoProps = {}, radius = "xl", url, ...other }: VideoProps) {
+    videoProps = deepmerge({
+        "width": "100%",
+        "height": "100%",
+        "controls": true,
+        "playsinline": true,
+        "playIcon": (
+            <ThemeIcon size="xl">
+                <IconPlayerPlay />
+            </ThemeIcon>
+        ),
+        "config": {
+            "youtube": {
+                "playervars": {
+                    "modestbranding": 1,
+                    "rel": 0
+                }
             }
-        }
-    }, config);
-
-    boxProps = deepmerge({
-        "sx": {
-            "borderRadius": radius
-        }
-    }, boxProps);
+        },
+    }, videoProps);
 
     return (
-        <Box {...boxProps}>
-            <ReactPlayer width={width} height={height} controls={controls} playsinline={playsinline} light={light} playIcon={playIcon} config={config} {...other} />
+        <Box sx={mergeSx({
+            "borderRadius": radius
+        }, sx)} {...other}>
+            <ReactPlayer url={url} {...videoProps} />
         </Box>
     );
 }

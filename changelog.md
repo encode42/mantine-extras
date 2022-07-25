@@ -1,3 +1,16 @@
+# 3.6.0
+### Added
+- The `videoProps` property for the `Video` component.
+
+### Changed
+- The `Video` component props now extend `BoxProps` instead of `ReactVideoProps`.
+- The `Video` component no longer lazy-loads by default.
+- The `VideoGroup` component now uses `100%` of the available width.
+
+### Removed
+- The `boxProps` property from the `Video` component.
+
+
 # 3.5.0
 ### Changed
 - The `TOSModal` component now has deny/accept buttons.

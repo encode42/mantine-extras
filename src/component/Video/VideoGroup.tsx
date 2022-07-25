@@ -1,6 +1,7 @@
 import React from "react";
 import { Group, GroupProps } from "@mantine/core";
 import { Video, VideoProps } from "./Video";
+import { mergeSx } from "../../util";
 
 /**
  * Options for the {@link VideoGroup} component.
@@ -22,9 +23,11 @@ export interface VideoGroupProps extends Omit<GroupProps, "children"> {
  *
  * @see VideoGroupProps
  */
-export function VideoGroup({ urls, videoProps, grow = true, ...other }: VideoGroupProps) {
+export function VideoGroup({ urls, videoProps, grow = true, sx, ...other }: VideoGroupProps) {
     return (
-        <Group grow={grow} {...other}>
+        <Group grow={grow} sx={mergeSx({
+            "width": "100%"
+        }, sx)} {...other}>
             {urls.map((video, i) => (
                 <Video key={i} url={video} {...videoProps} />
             ))}
