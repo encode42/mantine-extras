@@ -1,3 +1,20 @@
+# 4.0.0
+### Added
+- The `Caption.Wrapper` component.
+- The `Video.Group` component.
+- The `SharedCaptionProps` component.
+- The `SharedVideoProps` component.
+
+### Changed
+- Updated to Mantine 5.0.0.
+  - All components that used generics (`Caption`, `Button`, etc.) have been changed to use polymorphic components.
+- Updated Tabler Icons.
+- Updated `ErrorPage` to use `Stack` rather than `Group direction="column"`.
+
+### Removed
+- The `CaptionWrapper` component export.
+- The `VideoGroup` component export.
+
 # 3.6.0
 ### Added
 - The `videoProps` property for the `Video` component.

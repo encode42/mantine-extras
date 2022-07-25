@@ -1,11 +1,13 @@
-import React from "react";
-import { ActionIcon, ActionIconProps, useMantineColorScheme } from "@mantine/core";
+import React, { forwardRef } from "react";
+import { ActionIcon, ActionIconProps, createPolymorphicComponent, useMantineColorScheme } from "@mantine/core";
 import { IconMoon, IconSun, TablerIconProps } from "@tabler/icons";
+
+type PropsType = ActionIconProps & React.ComponentPropsWithoutRef<"button">
 
 /**
  * Options for the {@link ThemeToggle} component.
  */
-export interface ThemeToggleProps extends ActionIconProps<"button"> {
+export interface ThemeToggleProps extends PropsType {
     /**
      * Options for the icon.
      */
@@ -15,12 +17,12 @@ export interface ThemeToggleProps extends ActionIconProps<"button"> {
 /**
  * Component to toggle the website's theme.
  */
-export function ThemeToggle({ size = "xl", variant = "filled", onClick, iconProps, ...other }: ThemeToggleProps) {
+const _ThemeToggle = forwardRef<HTMLButtonElement, ThemeToggleProps>(({ size = "xl", variant = "filled", onClick, iconProps, ...other }, ref) => {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
     const isDark = colorScheme === "dark";
 
     return (
-        <ActionIcon size={size} variant={variant} onClick={event => {
+        <ActionIcon ref={ref} size={size} variant={variant} onClick={event => {
             toggleColorScheme();
 
             onClick?.(event);
@@ -28,4 +30,6 @@ export function ThemeToggle({ size = "xl", variant = "filled", onClick, iconProp
             {isDark ? <IconSun {...iconProps} /> : <IconMoon {...iconProps} />}
         </ActionIcon>
     );
-}
+});
+
+export const ThemeToggle = createPolymorphicComponent<"button", ThemeToggleProps>(_ThemeToggle);

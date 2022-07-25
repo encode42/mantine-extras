@@ -1,12 +1,12 @@
 import React from "react";
-import { Paper, SharedPaperProps } from "@mantine/core";
+import { Paper, PaperProps } from "@mantine/core";
 import { ThemeSx } from "../interface/ThemeSx";
 import { mergeSx } from "../../../util";
 
 /**
  * Options for the {@link MergedPaper} component.
  */
-interface MergedPaperProps extends SharedPaperProps, ThemeSx {}
+interface MergedPaperProps extends PaperProps, ThemeSx {}
 
 /**
  * A standardized {@link https://mantine.dev/core/paper Paper} component.

@@ -31,7 +31,7 @@ export function TOSModal({ withCloseButton = false, closeOnClickOutside = false,
                     {children}
                 </Box>
                 <Group grow>
-                    <Button color="red" component={Anchor} href="/">
+                    <Button<typeof Anchor<"a">> color="red" component={Anchor<"a">} href="/">
                         Deny
                     </Button>
                     <Button color="green" onClick={() => {

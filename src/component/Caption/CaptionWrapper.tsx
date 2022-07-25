@@ -1,13 +1,14 @@
-import React, { PropsWithChildren, ReactNode } from "react";
-import { Collapse, Stack, TextProps } from "@mantine/core";
-import { Caption } from "./Caption";
+import React, { forwardRef, ReactNode } from "react";
+import { Collapse, createPolymorphicComponent, Stack } from "@mantine/core";
+import { CaptionLabel } from "./CaptionLabel";
+import { SharedCaptionProps } from "../../util";
 
 /**
  * Options for the {@link CaptionWrapper} component.
  */
-export interface CaptionWrapperProps extends TextProps<"div"> {
+export interface CaptionWrapperProps extends SharedCaptionProps {
     /**
-     * Text to wrap with the {@link Caption} component.
+     * Text to wrap with the {@link CaptionLabel} component.
      */
     "caption"?: ReactNode,
 
@@ -18,19 +19,21 @@ export interface CaptionWrapperProps extends TextProps<"div"> {
 }
 
 /**
- * A component wrapper for {@link Caption}.
+ * A component wrapper for {@link CaptionLabel}.
  *
  * Used to display a caption beneath a component with controllable visibility.
  */
-export function CaptionWrapper({ children, caption, opened = true, ...other }: PropsWithChildren<CaptionWrapperProps>) {
+const _CaptionWrapper = forwardRef<HTMLParagraphElement, CaptionWrapperProps>(({ children, caption, opened = true, ...other }, ref) => {
     return (
         <Stack spacing={0} {...other}>
             {children}
             <Collapse in={opened}>
-                <Caption>
+                <CaptionLabel ref={ref}>
                     {caption}
-                </Caption>
+                </CaptionLabel>
             </Collapse>
         </Stack>
     );
-}
+});
+
+export const CaptionWrapper = createPolymorphicComponent<"p", CaptionWrapperProps>(_CaptionWrapper);

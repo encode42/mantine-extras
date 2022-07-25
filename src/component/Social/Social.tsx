@@ -1,12 +1,14 @@
-import React, { cloneElement, ReactElement } from "react";
-import { ActionIcon, ActionIconProps, Anchor, AnchorProps, useMantineTheme } from "@mantine/core";
+import React, { cloneElement, forwardRef, ReactElement } from "react";
+import { ActionIcon, ActionIconProps, Anchor, AnchorProps, createPolymorphicComponent, useMantineTheme } from "@mantine/core";
 import { TablerIconProps } from "@tabler/icons";
 import deepmerge from "deepmerge";
+
+type PropsType = AnchorProps & Partial<React.ComponentPropsWithoutRef<"a">>;
 
 /**
  * Options for the {@link Social} component.
  */
-export interface SocialProps extends AnchorProps<"a"> {
+export interface SocialProps extends PropsType {
     /**
      * Icon to display.
      *
@@ -22,13 +24,13 @@ export interface SocialProps extends AnchorProps<"a"> {
     /**
      * Properties for the {@link https://mantine.dev/core/action-icon ActionIcon}.
      */
-    "actionIconProps"?: ActionIconProps<"button">,
+    "actionIconProps"?: ActionIconProps
 }
 
 /**
  * A button to link to social media.
  */
-export function Social({ icon, iconProps = {}, actionIconProps = {}, href, target = "_blank", ...other}: SocialProps) {
+const _Social = forwardRef<HTMLButtonElement, SocialProps>(({ icon, iconProps = {}, actionIconProps = {}, href, target = "_blank", ...other}, ref) => {
     const theme = useMantineTheme();
 
     iconProps = deepmerge({
@@ -51,7 +53,7 @@ export function Social({ icon, iconProps = {}, actionIconProps = {}, href, targe
     const themeIcon = cloneElement(icon, iconProps);
 
     const button = (
-        <ActionIcon {...actionIconProps}>
+        <ActionIcon ref={ref} {...actionIconProps}>
             {themeIcon}
         </ActionIcon>
     );
@@ -63,4 +65,6 @@ export function Social({ icon, iconProps = {}, actionIconProps = {}, href, targe
             </Anchor>
         ) : button
     );
-}
+});
+
+export const Social = createPolymorphicComponent<"button", SocialProps>(_Social);

@@ -1,16 +1,13 @@
-import React from "react";
-import { Text, TextProps } from "@mantine/core";
-import { mergeSx } from "../../util";
+import React, { forwardRef } from "react";
+import { SharedCaptionProps } from "../../util";
+import { CaptionLabel } from "./CaptionLabel";
+import { CaptionWrapper } from "./CaptionWrapper";
+import { createPolymorphicComponent } from "@mantine/core";
 
-/**
- * A muted caption component.
- */
-export function Caption({ size = "sm", sx, ...other }: TextProps<"div">) {
-    return (
-        <Text sx={mergeSx(theme => ({
-            "color": `${theme.colorScheme === "dark" ? theme.colors.dark[2] : theme.colors.gray[6]}`,
-            "fontSize": theme.fn.size({ size, "sizes": theme.fontSizes }) - 2,
-            "marginTop": 7
-        }), sx)} {...other} />
-    );
-}
+const _Caption = forwardRef<HTMLParagraphElement, SharedCaptionProps>(({ ...other }, ref) => {
+    return <CaptionLabel ref={ref} {...other} />;
+}) as any;
+
+_Caption.Wrapper = CaptionWrapper;
+
+export const Caption = createPolymorphicComponent<"p", SharedCaptionProps>(_Caption);

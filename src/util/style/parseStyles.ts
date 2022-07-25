@@ -10,7 +10,7 @@ export function parseStyles(style: StyleType) {
 
     // Object is a function with theme arg
     if (typeof style === "function") {
-        return style(theme);
+        return style(theme, null);
     }
 
     return style;

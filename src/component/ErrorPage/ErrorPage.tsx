@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Anchor, Center, Divider, Group, Text, Title } from "@mantine/core";
+import { Anchor, Center, Divider, Group, Stack, Text, Title } from "@mantine/core";
 
 /**
  * Options for the {@link ErrorPage} component.
@@ -37,7 +37,7 @@ export function ErrorPage({
         <Center sx={{
             "height": "100vh"
         }}>
-            <Group direction="column" sx={{
+            <Stack sx={{
                 "alignItems": "center"
             }}>
                 <Group>
@@ -50,7 +50,7 @@ export function ErrorPage({
                 <Group>
                     {links}
                 </Group>
-            </Group>
+            </Stack>
         </Center>
     );
 }

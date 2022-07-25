@@ -1,4 +1,6 @@
 export * from "./interface/SxOperations";
+export * from "./interface/caption/SharedCaptionProps";
+export * from "./interface/video/SharedVideoProps";
 export * from "./notification/error";
 export * from "./style/merge";
 export * from "./style/parseStyles";

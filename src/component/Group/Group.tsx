@@ -1,6 +1,6 @@
 import React from "react";
 import { Group as MantineGroup, GroupProps as MantineGroupProps } from "@mantine/core";
-import { mergeSx, SxOperations, SxType } from "../../util";
+import { mergeSx, SxOperations } from "../../util";
 
 /**
  * Options for the {@link Group} component.

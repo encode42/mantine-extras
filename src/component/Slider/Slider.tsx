@@ -1,5 +1,5 @@
 import React from "react";
-import { InputWrapperBaseProps, SliderProps as MantineSliderProps, Slider as MantineSlider, InputWrapper } from "@mantine/core";
+import { InputWrapperBaseProps, SliderProps as MantineSliderProps, Slider as MantineSlider, Input } from "@mantine/core";
 
 /**
  * Options for the {@link Slider} component.
@@ -26,8 +26,8 @@ export interface SliderProps extends MantineSliderProps {
  */
 export function Slider({ label, hoverLabel, description, ...other }: SliderProps) {
     return (
-        <InputWrapper label={label} description={description}>
+        <Input.Wrapper label={label} description={description}>
             <MantineSlider label={hoverLabel} {...other} />
-        </InputWrapper>
+        </Input.Wrapper>
     );
 }
