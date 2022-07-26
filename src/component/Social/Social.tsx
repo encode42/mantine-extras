@@ -47,7 +47,7 @@ const _Social = forwardRef<HTMLButtonElement, SocialProps>(({ icon, iconProps = 
         },
         "size": "xl",
         "radius": "xl",
-        "variant": "hover"
+        "variant": "subtle"
     }, actionIconProps);
 
     const themeIcon = cloneElement(icon, iconProps);

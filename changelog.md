@@ -1,3 +1,10 @@
+# 4.1.0
+### Fixed
+- The `Social` component using the incorrect variant.
+
+### Added
+- The `grow` property on the `Slider` component.
+
 # 4.0.1
 ### Changed
 - Exported the `CaptionWrapperProps` and `VideoGroupProps` files.
