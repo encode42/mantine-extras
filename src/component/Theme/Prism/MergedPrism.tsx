@@ -10,7 +10,7 @@ import { mergeStyles } from "../../../util";
 export interface MergedPrismProps extends PrismProps, ThemeStyles {}
 
 /**
- * A standardized {@link https://mantine.dev/others/prism Prism} component.
+ * A standardized [Prism](https://mantine.dev/others/prism) component.
  *
  * Intended for use within {@link DarkPrism} or {@link LightPrism}.
  */

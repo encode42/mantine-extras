@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { createPolymorphicComponent, Text, TextProps } from "@mantine/core";
+import { createPolymorphicComponent, Text } from "@mantine/core";
 import { mergeSx, SharedCaptionProps } from "../../util";
 
 /**

@@ -22,7 +22,7 @@ const operations: SxOperations = {
 };
 
 /**
- * An improved {@link https://mantine.dev/core/button Button} component.
+ * An improved [Button](https://mantine.dev/core/button) component.
  */
 const _Button = forwardRef<HTMLButtonElement, ButtonProps>(({ fullHeight, sx, ...other }, ref) => {
     // Apply fullHeight operation

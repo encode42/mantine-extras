@@ -24,7 +24,7 @@ export interface ErrorPageProps {
 /**
  * A generic error page.
  *
- * {@code links} should be handled via your WAF.
+ * `links` should be handled via your WAF.
  */
 export function ErrorPage({
     statusCode,

@@ -12,7 +12,7 @@ export interface SocialProps extends PropsType {
     /**
      * Icon to display.
      *
-     * Intended for use with {@see https://github.com/tabler/tabler-icons Tabler Icons}.
+     * Intended for use with [https://github.com/tabler/tabler-icons](Tabler Icons).
      */
     "icon": ReactElement,
 
@@ -22,7 +22,7 @@ export interface SocialProps extends PropsType {
     "iconProps"?: TablerIconProps,
 
     /**
-     * Properties for the {@link https://mantine.dev/core/action-icon ActionIcon}.
+     * Properties for the [ActionIcon](https://mantine.dev/core/action-icon).
      */
     "actionIconProps"?: ActionIconProps
 }

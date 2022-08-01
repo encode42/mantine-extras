@@ -5,7 +5,7 @@ import { DarkPrism } from "./DarkPrism";
 import { LightPrism } from "./LightPrism";
 
 /**
- * A {@link https://mantine.dev/others/prism Prism} component that automatically changes with the theme.
+ * A [Prism](https://mantine.dev/others/prism) component that automatically changes with the theme.
  */
 export function ThemePrism({ children, ...other }: PrismProps) {
     const { colorScheme } = useMantineColorScheme();

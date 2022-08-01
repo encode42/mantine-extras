@@ -4,7 +4,7 @@ import { DarkPaper } from "./DarkPaper";
 import { LightPaper } from "./LightPaper";
 
 /**
- * A {@link https://mantine.dev/core/paper Paper} component that automatically changes with the theme.
+ * A [Paper](https://mantine.dev/core/paper) component that automatically changes with the theme.
  */
 export function ThemePaper({ ...other }: PaperProps) {
     const { colorScheme } = useMantineColorScheme();

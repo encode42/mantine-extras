@@ -16,7 +16,7 @@ export interface SharedVideoProps extends BoxProps {
     "url": ReactPlayerProps["url"],
 
     /**
-     * Properties of the {@link https://mantine.dev/core/box Box} component.
+     * Properties of the [Box](https://mantine.dev/core/box) component.
      */
     "videoProps"?: Omit<ReactPlayerProps, "url">
 }

@@ -2,11 +2,11 @@ import { ReactNode } from "react";
 import { SharedCaptionProps } from "../../../util";
 
 /**
- * Options for the {@link CaptionWrapper} component.
+ * Options for the {@link ~CaptionWrapper} component.
  */
 export interface CaptionWrapperProps extends SharedCaptionProps {
     /**
-     * Text to wrap with the {@link CaptionLabel} component.
+     * Text to wrap with the {@link ~CaptionLabel} component.
      */
     "caption"?: ReactNode,
 

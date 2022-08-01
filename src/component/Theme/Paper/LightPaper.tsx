@@ -3,7 +3,7 @@ import { PaperProps } from "@mantine/core";
 import { MergedPaper } from "./MergedPaper";
 
 /**
- * A light-themed {@link https://mantine.dev/core/paper Paper} component.
+ * A light-themed [Paper](https://mantine.dev/core/paper) component.
  */
 export function LightPaper({ withBorder = true, ...other }: PaperProps) {
     return (

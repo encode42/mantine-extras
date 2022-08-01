@@ -1,14 +1,14 @@
 import React from "react";
-import { Box, BoxProps, MantineNumberSize, ThemeIcon } from "@mantine/core";
+import { Box, ThemeIcon } from "@mantine/core";
 import { IconPlayerPlay } from "@tabler/icons";
 import deepmerge from "deepmerge";
-import ReactPlayer, { ReactPlayerProps } from "react-player";
+import ReactPlayer from "react-player";
 import { mergeSx, SharedVideoProps } from "../../util";
 
 /**
  * A versatile video component.
  *
- * @see {@link https://github.com/CookPete/react-player ReactPlayer}
+ * @see [ReactPlayer](https://github.com/CookPete/react-player)
  */
 export function VideoPlayer({ sx, videoProps = {}, radius = "xl", url, ...other }: SharedVideoProps) {
     videoProps = deepmerge({

@@ -9,7 +9,7 @@ import { mergeSx } from "../../../util";
 interface MergedPaperProps extends PaperProps, ThemeSx {}
 
 /**
- * A standardized {@link https://mantine.dev/core/paper Paper} component.
+ * A standardized [Paper](https://mantine.dev/core/paper) component.
  *
  * Intended for use within {@link DarkPaper} or {@link LightPaper}.
  */

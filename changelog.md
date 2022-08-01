@@ -1,3 +1,8 @@
+# 4.1.1
+### Changed
+- Updated all dependencies
+- Improved documentation
+
 # 4.1.0
 ### Fixed
 - The `Social` component using the incorrect variant.

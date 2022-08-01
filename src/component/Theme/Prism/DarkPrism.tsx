@@ -4,7 +4,7 @@ import { PrismProps } from "@mantine/prism";
 import { MergedPrism } from "./MergedPrism";
 
 /**
- * A dark-themed {@link https://mantine.dev/others/prism Prism} component.
+ * A dark-themed [Prism](https://mantine.dev/others/prism) component.
  */
 export function DarkPrism({ children, ...other }: PrismProps) {
     const theme = useMantineTheme();

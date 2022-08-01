@@ -28,7 +28,7 @@ export interface SliderProps extends MantineSliderProps {
 }
 
 /**
- * Mantine UI's {@link https://mantine.dev/core/slider Slider} wrapped in an {@link https://mantine.dev/core/input-wrapper InputWrapper}.
+ * Mantine UI's [Slider](https://mantine.dev/core/slider) wrapped in an [InputWrapper](https://mantine.dev/core/input-wrapper).
  */
 export function Slider({ label, hoverLabel, description, grow = false, sx, ...other }: SliderProps) {
     return (

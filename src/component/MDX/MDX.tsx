@@ -15,7 +15,7 @@ export interface MDXProps {
 }
 
 /**
- * A {@link https://mdxjs.com/ MDX} wrapper for Mantine UI.
+ * A [MDX](https://mdxjs.com/) wrapper for Mantine UI.
  */
 export function MDX({ file }: MDXProps) {
     return (

@@ -22,7 +22,7 @@ const operations: SxOperations = {
 };
 
 /**
- * An improved {@link https://mantine.dev/core/group Group} component.
+ * An improved [Group](https://mantine.dev/core/group) component.
  */
 export function Group({ stretch, sx, ...other }: GroupProps) {
     // Apply stretch operation
