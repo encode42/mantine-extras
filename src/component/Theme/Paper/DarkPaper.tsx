@@ -1,11 +1,11 @@
 import React from "react";
-import { PaperProps } from "@mantine/core";
 import { MergedPaper } from "./MergedPaper";
+import { ThemePaperProps } from "../../../util";
 
 /**
  * A dark-themed [Paper](https://mantine.dev/core/paper) component.
  */
-export function DarkPaper({ ...other }: PaperProps) {
+export function DarkPaper({ ...other }: ThemePaperProps) {
     return (
         <MergedPaper {...other} themeSx={theme => ({
             "background": theme.colors.dark[8]

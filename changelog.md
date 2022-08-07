@@ -1,3 +1,11 @@
+# 4.1.2
+### Changed
+- Forced `id` prop to exist on `ThemePaper`.
+- Updated all dependencies.
+
+### Added
+- The `ThemePaperProps` interface.
+
 # 4.1.1
 ### Changed
 - Updated all dependencies
