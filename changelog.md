@@ -1,3 +1,24 @@
+# 4.2.0
+### Added
+- Started work on `MDX` component.
+- The `DeleteButton` component.
+- The `HoverDate` component.
+- The `Indicator` component.
+
+### Changed
+- Switched tooling to `pnpm`.
+- Moved some dependencies to `peerDependencies`.
+
+### Removed
+- All previously polymorphic components are no longer polymorphic.
+- Moved many of the utility methods into their own package, `@encode42/node-extras`.
+  - `arrayify`
+  - `saveText`
+  - `save`
+  - `toArrayBuffer`
+  - `Class`
+  - `Optional`
+
 # 4.1.3
 ### Changed
 - Updated all dependencies.

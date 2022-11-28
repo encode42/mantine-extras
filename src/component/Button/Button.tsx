@@ -1,5 +1,5 @@
-import React, { forwardRef } from "react";
-import { Button as MantineButton, ButtonProps as MantineButtonProps, createPolymorphicComponent } from "@mantine/core";
+import React from "react";
+import { Button as MantineButton, ButtonProps as MantineButtonProps } from "@mantine/core";
 import { mergeSx, SxOperations } from "../../util";
 
 /**
@@ -24,15 +24,13 @@ const operations: SxOperations = {
 /**
  * An improved [Button](https://mantine.dev/core/button) component.
  */
-const _Button = forwardRef<HTMLButtonElement, ButtonProps>(({ fullHeight, sx, ...other }, ref) => {
+export function Button({ fullHeight, sx, ...other }: ButtonProps) {
     // Apply fullHeight operation
     if (fullHeight) {
         sx = mergeSx(operations.stretch, sx);
     }
 
     return (
-        <MantineButton ref={ref} sx={sx} {...other} />
+        <MantineButton sx={sx} {...other} />
     );
-});
-
-export const Button = createPolymorphicComponent<"button", ButtonProps>(_Button);
+}

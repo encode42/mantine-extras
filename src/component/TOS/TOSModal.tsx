@@ -1,7 +1,7 @@
 import React from "react";
 import { useDisclosure } from "@mantine/hooks";
 import { Anchor, Box, Button, Group, Modal, ModalProps, Stack } from "@mantine/core";
-import { Optional } from "../../util";
+import { Optional } from "@encode42/node-extras";
 
 /**
  * Options for the {@link TOSModal} component.
