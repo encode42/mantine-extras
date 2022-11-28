@@ -1,4 +1,4 @@
-# 4.2.0
+# 5.0.0
 ### Added
 - Started work on `MDX` component.
 - The `DeleteButton` component.

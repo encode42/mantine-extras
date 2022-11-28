@@ -1,7 +1,7 @@
 {
   "name": "@encode42/mantine-extras",
   "description": "Extra components and functionality for Mantine UI.",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "author": {
     "name": "Encode42",
     "email": "me@encode42.dev",
@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "deepmerge": ">=4",
-    "file-saver": "^2.0.0",
-    "react-player": "^2.11.0"
+    "file-saver": "^2.0",
+    "react-player": "^2.11"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.3",
