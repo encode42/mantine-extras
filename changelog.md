@@ -1,3 +1,7 @@
+# 5.0.2
+### Changed
+- Moved some `peerDependencies` back to `dependencies`.
+
 # 5.0.1
 ### Changed
 - Fully switched tooling to `pnpm`.

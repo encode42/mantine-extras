@@ -1,7 +1,7 @@
 {
   "name": "@encode42/mantine-extras",
   "description": "Extra components and functionality for Mantine UI.",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "author": {
     "name": "Encode42",
     "email": "me@encode42.dev",
@@ -31,20 +31,20 @@
     "changelog.md"
   ],
   "peerDependencies": {
-    "@encode42/node-extras": "^1",
     "@mantine/core": "^5.8",
     "@mantine/hooks": "^5.8",
     "@mantine/notifications": "^5.8",
     "@mantine/prism": "^5.8",
-    "@mdx-js/react": "^2",
     "@tabler/icons": ">=1.28",
     "react": ">=17",
     "react-dom": ">=17"
   },
   "dependencies": {
+    "@encode42/node-extras": "^1",
     "deepmerge": "^4",
     "file-saver": "^2",
-    "react-player": "^2"
+    "react-player": "^2",
+    "@mdx-js/react": "^2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.3",
