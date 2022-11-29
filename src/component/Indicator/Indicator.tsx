@@ -1,3 +1,4 @@
+import React from "react";
 import { Indicator as MantineIndicator, IndicatorProps as MantineIndicatorProps, MantineColor } from "@mantine/core";
 import { mergeStyles } from "../../util";
 

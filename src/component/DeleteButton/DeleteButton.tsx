@@ -1,3 +1,4 @@
+import React from "react";
 import { useDisclosure } from "@mantine/hooks";
 import { Button, ButtonProps, Group, Modal, Stack, Text } from "@mantine/core";
 import { IconArrowLeft, IconTrash } from "@tabler/icons";

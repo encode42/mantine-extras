@@ -1,3 +1,4 @@
+import React from "react";
 import { MDXComponents } from "mdx/types";
 import { cloneElement, memo, PropsWithChildren, ReactElement, ReactNode } from "react";
 import { Anchor, Code, CodeProps, List, Stack, Text, Title } from "@mantine/core";

@@ -1,3 +1,7 @@
+# 5.0.3
+### Changed
+- Changed how the project is built.
+
 # 5.0.2
 ### Changed
 - Moved some `peerDependencies` back to `dependencies`.
